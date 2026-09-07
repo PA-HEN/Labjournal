@@ -1,0 +1,6 @@
+---
+title: "lab2"
+output: html_document
+---
+
+# Even uitproberen! :)
