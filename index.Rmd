@@ -1,26 +1,14 @@
 ---
 title: "Lab journal"
-author: "by: Your Name"
+author: "by: Paula"
 bibliography: references.bib
 ---
 
-wsdfghjhgfd
-
-listy:
-
-1.  gfhjkl
-2.  hjkl;
-3.  
-
-```{r}
-2 + 2 
-```
-
 ```{r, install remotely, globalsettings, echo=FALSE, warning=FALSE, results='hide'}
-install.packages("remotes")
-remotes::install_github("rlesur/klippy")
+#install.packages("remotes")
+#remotes::install_github("rlesur/klippy")
 ```
-
+Hallo world!
 ```{r, globalsettings, echo=FALSE, warning=FALSE, results='hide'}
 library(knitr)
 
