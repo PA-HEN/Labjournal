@@ -3,13 +3,19 @@ title: "lab2"
 output: html_document
 ---
 
-```{r}
+```{r globalsettubfs, echo = FALSEm warning = FALSE}
 
 #install.packages("RSiena")
 #install.packages("igraph")
 library(RSiena)
 library(igraph)
 library(tidyverse)
+library(knitr)
+
+opts_chunk$set(warning = FALSE, message = FALSE)
+# tidy = TRUE (uitlijnen/spaties)
+# results = 'hold' (output op het einde)
+# eval = FALSE (code niet runnen, op basis van eerder werk)
 ```
 
 ## Load networks

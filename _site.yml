@@ -13,8 +13,16 @@ navbar:
     - text: "My journal"
       menu:
       - text: "Week1"
-        href: lab1.html
+        href: 10lab1.html
       - text: "Week2"
+        href: lab2.html
+      - text: "Week3"
+        href: lab3.html
+    - text: "Final project"
+      menu:
+      - text: "Introduction"
+        href: lab1.html
+      - text: "Theory"
         href: lab2.html
       - text: "Week3"
         href: lab3.html
