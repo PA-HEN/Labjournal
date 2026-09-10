@@ -233,5 +233,3 @@ ClustBCG(mat = small_matrix, type = "directed")
 - I think this is the out-degree CC?
 
 - If we check with the ClusterBCG output for participant 1, that tracks
-
-  - 
