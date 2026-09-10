@@ -43,7 +43,7 @@ But please note, we are not here to make a beautiful website, our intention is j
 
 Last compiled on `r format(Sys.time(), '%B, %Y')`
 
-*Dit is Paula's Lab Journal*.
+*Hello, This is Paula's Lab Journal for the course Social Networks (SOW-SS211-2026)*.
 
 <br>
 
