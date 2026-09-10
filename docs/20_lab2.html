@@ -415,13 +415,13 @@ div.tocify {
 <pre><code>## The following object is masked from &#39;package:base&#39;:
 ## 
 ##     union</code></pre>
-<pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+<pre><code>## ── Attaching core tidyverse packages ─────────── tidyverse 2.0.0 ──
 ## ✔ dplyr     1.1.4     ✔ readr     2.1.6
 ## ✔ forcats   1.0.1     ✔ stringr   1.6.0
 ## ✔ ggplot2   4.0.0     ✔ tibble    3.3.0
 ## ✔ lubridate 1.9.5     ✔ tidyr     1.3.1
 ## ✔ purrr     1.1.0     
-## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ── Conflicts ───────────────────────────── tidyverse_conflicts() ──
 ## ✖ lubridate::%--%()      masks igraph::%--%()
 ## ✖ dplyr::as_data_frame() masks tibble::as_data_frame(), igraph::as_data_frame()
 ## ✖ purrr::compose()       masks igraph::compose()
@@ -433,315 +433,10 @@ div.tocify {
 <div id="load-networks-s501-s502" class="section level2" number="1.1">
 <h2><span class="header-section-number">1.1</span> Load Networks s501
 &amp; s502</h2>
-<pre class="r"><code>s501</code></pre>
-<pre><code>##    V1 V2 V3 V4 V5 V6 V7 V8 V9 V10 V11 V12 V13 V14 V15 V16 V17 V18 V19 V20 V21
-## 1   0  0  0  0  0  0  0  0  0   0   1   0   0   1   0   0   0   0   0   0   0
-## 2   0  0  0  0  0  0  1  0  0   0   1   0   0   0   0   0   0   0   0   0   0
-## 3   0  0  0  1  0  0  0  0  1   0   0   0   0   0   0   0   0   0   0   0   0
-## 4   0  0  1  0  0  0  0  0  1   0   0   0   0   0   0   0   0   0   0   0   0
-## 5   0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 6   0  0  0  0  0  0  0  1  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 7   0  1  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 8   0  0  0  0  0  1  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 9   0  0  1  1  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 10  0  0  0  0  0  0  0  0  0   0   1   0   0   0   1   0   0   0   0   0   0
-## 11  0  1  0  0  0  0  0  0  0   0   0   0   0   0   1   1   0   0   0   0   0
-## 12  0  0  0  0  0  0  1  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 13  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 14  1  0  0  0  0  0  0  0  0   1   1   0   0   0   0   0   0   0   0   0   0
-## 15  0  0  0  0  0  0  0  0  0   1   1   0   0   0   0   1   0   0   0   0   0
-## 16  0  0  0  0  0  0  0  0  0   0   1   0   0   0   1   0   0   0   0   0   0
-## 17  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   1   1   0   1
-## 18  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   1   0   0
-## 19  0  0  0  0  0  0  0  0  0   0   1   0   0   0   0   0   0   0   0   0   0
-## 20  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 21  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 22  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   1   0   0   0   1
-## 23  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 24  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   1   0   1   0   1
-## 25  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 26  0  0  0  0  0  0  1  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 27  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 28  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 29  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 30  0  0  0  0  0  0  0  0  0   0   1   0   0   0   0   0   0   0   0   0   0
-## 31  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   1
-## 32  0  0  0  0  1  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   1
-## 33  0  0  0  0  0  0  0  0  0   1   0   0   0   0   0   0   0   0   0   0   0
-## 34  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 35  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   1   0   0   0
-## 36  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 37  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 38  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 39  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 40  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 41  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 42  0  0  0  0  0  0  1  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 43  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 44  0  0  0  0  0  0  1  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 45  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 46  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 47  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 48  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 49  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 50  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-##    V22 V23 V24 V25 V26 V27 V28 V29 V30 V31 V32 V33 V34 V35 V36 V37 V38 V39 V40
-## 1    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 2    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 3    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 4    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 5    0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0
-## 6    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 7    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 8    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 9    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 10   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0
-## 11   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 12   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 13   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 14   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 15   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 16   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 17   1   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 18   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0
-## 19   0   0   1   0   1   0   0   0   1   0   0   0   0   0   0   0   0   0   0
-## 20   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 21   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 22   0   0   0   0   0   0   0   0   0   1   0   0   1   0   0   0   0   0   0
-## 23   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 24   1   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 25   1   0   0   0   0   0   0   0   0   1   1   0   0   0   0   0   0   0   0
-## 26   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0
-## 27   0   0   0   0   0   0   1   1   1   0   0   0   0   0   0   0   0   0   0
-## 28   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 29   0   0   0   0   1   0   0   0   1   0   0   1   0   0   0   0   0   0   0
-## 30   0   0   0   0   1   0   0   1   0   0   0   1   0   0   0   0   0   0   0
-## 31   0   0   0   1   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0
-## 32   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   1   0   0   0
-## 33   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0
-## 34   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   1   0   0   0
-## 35   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 36   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0
-## 37   0   0   0   0   0   0   0   0   0   1   1   0   1   0   0   0   0   0   0
-## 38   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0
-## 39   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 40   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 41   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   1   0   0
-## 42   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 43   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0
-## 44   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 45   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1
-## 46   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1
-## 47   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 48   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 49   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 50   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-##    V41 V42 V43 V44 V45 V46 V47 V48 V49 V50
-## 1    0   0   0   0   0   0   0   0   0   0
-## 2    0   0   0   0   0   0   0   0   0   0
-## 3    0   0   0   0   0   0   0   0   0   0
-## 4    0   0   0   0   0   0   0   0   0   0
-## 5    0   0   0   0   0   0   0   0   0   0
-## 6    0   0   0   0   0   0   0   0   0   0
-## 7    0   1   0   1   0   0   0   0   0   0
-## 8    0   0   0   0   0   0   0   0   0   0
-## 9    0   0   0   0   0   0   0   0   0   0
-## 10   0   0   0   0   0   0   0   0   0   0
-## 11   0   0   0   0   0   0   0   0   0   0
-## 12   0   1   0   1   0   0   0   0   0   0
-## 13   0   0   0   0   0   0   0   0   0   0
-## 14   0   0   0   0   0   0   0   0   0   0
-## 15   0   0   0   0   0   0   0   0   0   0
-## 16   0   0   0   0   0   0   0   0   0   0
-## 17   0   0   0   0   0   0   0   0   0   0
-## 18   0   0   0   0   0   0   0   0   0   0
-## 19   0   0   0   0   0   0   0   0   0   0
-## 20   0   0   0   0   0   0   0   0   0   0
-## 21   0   0   0   0   0   0   0   0   0   0
-## 22   0   0   0   0   0   0   0   0   0   0
-## 23   0   0   0   0   0   0   0   0   0   0
-## 24   0   0   0   0   0   0   0   0   0   0
-## 25   0   0   0   0   0   0   0   0   0   0
-## 26   0   0   0   1   0   0   0   0   0   0
-## 27   0   0   0   0   0   0   0   0   0   0
-## 28   0   0   0   0   0   0   0   0   0   0
-## 29   0   0   0   0   0   0   0   0   0   0
-## 30   0   0   0   0   0   0   0   0   0   0
-## 31   0   0   0   0   0   0   0   0   0   0
-## 32   0   0   0   0   0   0   0   0   0   0
-## 33   0   0   0   0   0   0   0   0   0   0
-## 34   0   0   0   0   0   0   0   0   0   0
-## 35   0   0   0   0   0   0   0   0   0   0
-## 36   1   0   0   0   0   0   0   0   0   0
-## 37   0   0   0   0   0   0   0   0   0   0
-## 38   1   0   0   0   0   0   0   0   0   0
-## 39   0   0   1   0   0   0   0   0   0   0
-## 40   0   0   0   0   1   1   1   0   0   0
-## 41   0   0   0   0   0   0   0   0   0   0
-## 42   0   0   0   1   0   0   0   0   0   0
-## 43   0   0   0   0   0   0   0   0   0   0
-## 44   0   1   0   0   0   0   0   0   0   0
-## 45   0   0   0   0   0   1   1   0   0   0
-## 46   0   0   0   0   1   0   0   0   1   0
-## 47   0   0   0   0   0   0   0   0   0   0
-## 48   0   0   0   0   0   1   0   0   1   0
-## 49   0   0   0   0   0   1   0   1   0   0
-## 50   0   0   0   0   0   0   0   0   0   0</code></pre>
-<pre class="r"><code>s502</code></pre>
-<pre><code>##    V1 V2 V3 V4 V5 V6 V7 V8 V9 V10 V11 V12 V13 V14 V15 V16 V17 V18 V19 V20 V21
-## 1   0  0  0  0  0  0  0  0  0   1   0   0   0   1   0   0   0   0   0   0   0
-## 2   0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 3   0  0  0  1  0  0  0  0  1   0   0   0   0   0   0   0   0   0   0   0   0
-## 4   0  0  1  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 5   0  0  0  1  0  0  0  0  0   0   0   0   0   0   0   0   1   0   0   0   0
-## 6   0  0  0  0  0  0  0  1  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 7   0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 8   0  0  0  0  0  1  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 9   0  0  1  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 10  1  0  0  0  0  0  0  0  0   0   1   0   0   1   0   0   0   0   0   0   0
-## 11  1  0  0  0  0  0  0  0  0   1   0   0   0   0   0   0   0   0   1   0   0
-## 12  0  0  0  0  0  0  0  0  0   0   0   0   0   0   1   0   0   0   0   0   0
-## 13  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 14  1  0  0  0  0  0  0  0  0   1   1   0   0   0   0   0   0   0   0   0   0
-## 15  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 16  0  0  0  0  0  0  0  0  0   0   0   0   0   0   1   0   0   0   0   0   0
-## 17  0  0  0  1  1  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 18  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 19  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 20  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 21  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   1   0   0
-## 22  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   1   0   0   0   0
-## 23  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   1   0   0
-## 24  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   1   0   0   0   0
-## 25  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 26  0  0  0  0  0  0  1  0  0   0   0   0   0   0   0   1   0   0   0   0   0
-## 27  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   1   0   0   0   0
-## 28  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 29  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 30  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   1   0   0
-## 31  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 32  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 33  0  0  0  0  0  0  0  0  0   1   0   0   0   0   0   0   0   0   0   0   0
-## 34  0  0  0  1  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 35  0  0  0  0  0  1  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 36  0  0  0  0  0  0  0  0  0   0   0   0   0   0   1   0   0   0   0   0   0
-## 37  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   1
-## 38  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 39  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 40  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 41  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   1   0   0
-## 42  0  0  0  0  0  0  0  0  0   0   0   0   0   0   1   0   0   0   0   0   0
-## 43  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 44  0  0  0  0  0  0  1  0  0   0   0   0   0   0   0   1   0   0   0   0   0
-## 45  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 46  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 47  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 48  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 49  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-## 50  0  0  0  0  0  0  0  0  0   0   0   0   0   0   0   0   0   0   0   0   0
-##    V22 V23 V24 V25 V26 V27 V28 V29 V30 V31 V32 V33 V34 V35 V36 V37 V38 V39 V40
-## 1    0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0
-## 2    0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 3    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 4    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 5    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 6    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 7    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 8    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 9    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 10   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0
-## 11   0   0   0   0   1   0   0   0   1   0   0   0   0   0   0   0   0   0   0
-## 12   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 13   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 14   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 15   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0
-## 16   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 17   1   0   1   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0
-## 18   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0
-## 19   0   0   0   0   0   0   0   0   1   0   0   0   0   0   1   0   0   0   0
-## 20   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 21   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   1
-## 22   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 23   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 24   1   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0
-## 25   0   0   1   0   0   1   1   0   0   0   1   0   0   0   0   0   0   0   0
-## 26   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 27   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0
-## 28   0   0   1   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 29   0   0   0   0   0   0   0   0   1   0   0   1   0   0   0   0   0   0   0
-## 30   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0
-## 31   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   1   0   0   0
-## 32   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   1   0   0   0
-## 33   0   0   0   0   0   0   0   1   1   0   0   0   0   0   0   0   0   0   0
-## 34   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0
-## 35   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0
-## 36   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   1   0   0
-## 37   0   0   0   0   0   0   0   0   0   1   1   0   1   1   0   0   0   0   0
-## 38   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 39   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0
-## 40   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 41   0   0   0   0   0   0   0   0   1   0   0   0   0   0   1   0   0   0   0
-## 42   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 43   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0
-## 44   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 45   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1
-## 46   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1
-## 47   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1
-## 48   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 49   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-## 50   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-##    V41 V42 V43 V44 V45 V46 V47 V48 V49 V50
-## 1    0   0   0   0   0   0   0   0   0   0
-## 2    0   0   0   0   0   0   0   0   0   0
-## 3    0   0   0   0   0   0   0   0   0   0
-## 4    0   0   0   0   0   0   0   0   0   0
-## 5    0   0   0   0   0   0   0   0   0   0
-## 6    0   0   0   0   0   0   0   0   0   0
-## 7    0   0   0   0   0   0   0   0   0   0
-## 8    0   0   0   0   0   0   0   0   0   0
-## 9    0   0   0   0   0   0   0   0   0   0
-## 10   0   0   0   0   0   0   0   0   0   0
-## 11   0   0   0   0   0   0   0   0   0   0
-## 12   0   1   0   1   0   0   0   0   0   0
-## 13   0   0   0   0   0   0   0   0   0   0
-## 14   0   0   0   0   0   0   0   0   0   0
-## 15   0   0   0   0   0   0   0   0   0   0
-## 16   0   1   0   0   0   0   0   0   0   0
-## 17   0   0   0   0   0   0   0   0   0   0
-## 18   0   0   0   0   0   0   0   0   0   0
-## 19   1   0   0   0   0   0   0   0   0   0
-## 20   0   0   0   0   0   0   0   0   0   0
-## 21   0   0   0   0   0   0   0   0   0   0
-## 22   0   0   0   0   0   0   0   0   0   0
-## 23   0   0   0   0   0   0   0   0   0   0
-## 24   0   0   0   0   0   0   0   0   0   0
-## 25   0   0   0   0   0   0   0   0   0   0
-## 26   0   1   0   0   0   0   0   0   0   0
-## 27   0   0   0   0   0   0   0   0   0   0
-## 28   0   0   0   0   0   0   0   0   0   0
-## 29   0   1   0   0   0   0   0   0   0   0
-## 30   1   0   0   0   0   0   0   0   0   0
-## 31   0   0   0   0   0   0   0   0   0   0
-## 32   0   0   0   0   0   0   0   0   0   0
-## 33   0   0   0   0   0   0   0   0   0   0
-## 34   0   0   1   0   0   0   0   0   0   0
-## 35   0   0   0   0   0   0   0   0   0   0
-## 36   1   0   0   0   0   0   0   0   0   0
-## 37   0   0   0   0   0   0   0   0   0   0
-## 38   1   0   0   0   0   0   0   0   0   0
-## 39   0   0   1   0   0   0   0   0   0   0
-## 40   0   0   0   0   1   1   1   0   0   0
-## 41   0   0   0   0   0   0   0   0   0   0
-## 42   0   0   0   0   0   0   0   0   0   0
-## 43   0   0   0   0   0   0   0   0   0   0
-## 44   0   0   0   0   0   0   0   0   0   0
-## 45   0   0   0   0   0   1   1   0   0   0
-## 46   0   0   0   0   1   0   1   0   1   0
-## 47   0   0   0   0   1   1   0   0   0   0
-## 48   0   0   0   0   0   1   0   0   1   0
-## 49   0   0   0   0   0   1   0   1   0   0
-## 50   0   0   0   0   0   0   0   0   0   0</code></pre>
-<pre class="r"><code># ?s501 </code></pre>
+<pre class="r"><code># s501
+# s502
+# ?s501 </code></pre>
+<p><br></p>
 </div>
 <div id="inspect-network-s501" class="section level2" number="1.2">
 <h2><span class="header-section-number">1.2</span> Inspect Network
@@ -762,6 +457,7 @@ class(s501)</code></pre>
 
 # ?graph_from_adjacency_matrix()
 # ?from_adjacency()</code></pre>
+<p><br></p>
 </div>
 <div id="descriptives" class="section level2" number="1.3">
 <h2><span class="header-section-number">1.3</span> Descriptives</h2>
@@ -808,10 +504,7 @@ plot(network) # graphic overview of someone&#39;s network (rough)</code></pre>
 <div id="calculate-clustering" class="section level2" number="1.4">
 <h2><span class="header-section-number">1.4</span> Calculate
 Clustering</h2>
-<div id="tutorial-chapter-4-4.3.2.5-clustering" class="section level3"
-number="1.4.1">
-<h3><span class="header-section-number">1.4.1</span> <em>Tutorial,
-Chapter 4, 4.3.2.5 Clustering</em></h3>
+<p><strong><em>Tutorial, Chapter 4, 4.3.2.5 Clustering</em></strong></p>
 <ul>
 <li><p>People lump together in separate groups</p></li>
 <li><p>The <strong>clustering coefficient</strong> for v<em>i</em> is
@@ -834,16 +527,15 @@ transitive triads</p></li>
 <li><p>This does <em>not</em> appply to directed networks</p></li>
 </ul></li>
 </ul>
-</div>
-<div id="formula" class="section level3" number="1.4.2">
-<h3><span class="header-section-number">1.4.2</span> Formula</h3>
+<p><br></p>
+<p><strong><em>Formula</em></strong></p>
 <p><span class="math display">\[CC(vi) = ∑ejk / ki∗(ki−1)\]</span></p>
+<p><br></p>
 </div>
-</div>
-<div id="clustering-coefficient-in-r-using-the-igraph-package"
-class="section level2" number="1.5">
+<div id="clustering-coefficient-in-r" class="section level2"
+number="1.5">
 <h2><span class="header-section-number">1.5</span> Clustering
-coefficient in R, using the igraph package</h2>
+coefficient in R</h2>
 <ul>
 <li><p>Use the transitivity() function? For more information: <a
 href="https://r.igraph.org/reference/transitivity.html"
@@ -936,11 +628,12 @@ for (i in 1:nrow(s501)) {
 
 transitivity(network) # 0.4229075 (but what does this number say? nothing, i think)</code></pre>
 <pre><code>## [1] 0.4229075</code></pre>
+<p><br></p>
 </div>
-<div id="another-approach-using-the-directedclustering-package"
-class="section level2" number="1.6">
-<h2><span class="header-section-number">1.6</span> Another approach,
-using the DirectedClustering package</h2>
+<div id="directedclustering-package" class="section level2"
+number="1.6">
+<h2><span class="header-section-number">1.6</span> DirectedClustering
+package</h2>
 <ul>
 <li><a
 href="https://cran.r-project.org/web/packages/DirectedClustering/DirectedClustering.pdf"
@@ -1238,6 +931,7 @@ ClustBCG(mat = s501_copy, type = &quot;directed&quot;) # = 0.3994831</code></pre
 # GlobaltotalCC &amp; totalCC (local) 
 
 # ClustF(mat = s501_copy, type = &quot;directed&quot;) # = 0.3994831 (same value)</code></pre>
+<p><br></p>
 </div>
 <div id="check-with-a-small-network" class="section level2"
 number="1.7">
@@ -1419,6 +1113,7 @@ ClustBCG(mat = small_matrix, type = &quot;directed&quot;)</code></pre>
 ## 
 ## $GlobaltotalCC
 ## [1] 0.74375</code></pre>
+<p><br></p>
 </div>
 <div id="by-hand" class="section level2" number="1.8">
 <h2><span class="header-section-number">1.8</span> By hand</h2>
@@ -1430,21 +1125,25 @@ v<em>i</em></p></li>
 <li><p>As participant 1 is friends with participant 2, 3 and 4, we count
 the ties between them = 2</p></li>
 <li><p>Next, we calculate the number of neighbors of participant 1 =
-3</p>
-<p>$$</p>
-<p>∑ejk / ki∗(ki−1)</p>
-<p>2 / 3*(3-1)</p>
-<p>2 / 6 = 0,333</p>
-<p>$$</p></li>
+3</p></li>
+<li><p>∑ejk / ki∗(ki−1)</p></li>
+<li><p>2 / 3*(3-1)</p></li>
+<li><p>2 / 6 = 0,333</p></li>
 </ul></li>
+</ul>
+<!-- -->
+<ul>
 <li><p>I think this is the out-degree CC?</p></li>
 <li><p>If we check with the ClusterBCG output for participant 1, that
-tracks</p></li>
+tracks</p>
+<ul>
+<li></li>
+</ul></li>
 </ul>
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogImxhYjIiDQpvdXRwdXQ6IGh0bWxfZG9jdW1lbnQNCi0tLQ0KDQojIExhYmpvdXJuYWwgV2VlayAyDQoNCmBgYHtyLCBnbG9iYWxzZXR0aW5ncywgZWNobyA9IEZBTFNFLCB3YXJuaW5nID0gRkFMU0V9DQoNCiNpbnN0YWxsLnBhY2thZ2VzKCJSU2llbmEiKQ0KI2luc3RhbGwucGFja2FnZXMoImlncmFwaCIpDQpsaWJyYXJ5KFJTaWVuYSkNCmxpYnJhcnkoaWdyYXBoKQ0KbGlicmFyeSh0aWR5dmVyc2UpDQpsaWJyYXJ5KGtuaXRyKQ0KDQpvcHRzX2NodW5rJHNldCh3YXJuaW5nID0gRkFMU0UsIG1lc3NhZ2UgPSBGQUxTRSkNCiMgdGlkeSA9IFRSVUUgKHVpdGxpam5lbi9zcGF0aWVzKQ0KIyByZXN1bHRzID0gJ2hvbGQnIChvdXRwdXQgb3AgaGV0IGVpbmRlKQ0KIyBldmFsID0gRkFMU0UgKGNvZGUgbmlldCBydW5uZW4sIG9wIGJhc2lzIHZhbiBlZXJkZXIgd2VyaykNCmBgYA0KDQojIyBMb2FkIE5ldHdvcmtzIHM1MDEgJiBzNTAyDQoNCmBgYHtyfQ0KczUwMQ0KczUwMg0KIyA/czUwMSANCmBgYA0KDQojIyBJbnNwZWN0IE5ldHdvcmsgczUwMQ0KDQpgYGB7cn0NClZpZXcoczUwMSkNCmNsYXNzKHM1MDEpDQpzdHIoczUwMSkNCg0KczUwMV9jb3B5IDwtIHM1MDENCg0KIyBXaWUgaXMgYmV2cmllbmQgbWV0IHdpZT8NCiMgSG9ldmVlbCB2cmllbmRlbiBoZWJiZW4gbWVuc2VuPw0KIyBNZXQgaG9ldmVlbCBtZW5zZW4gaXMgaWVtYW5kIGJldnJpZW5kPw0KDQojID9ncmFwaF9mcm9tX2FkamFjZW5jeV9tYXRyaXgoKQ0KIyA/ZnJvbV9hZGphY2VuY3koKQ0KYGBgDQoNCiMjIERlc2NyaXB0aXZlcw0KDQpgYGB7cn0NCmZyaWVuZHNfbm9taW5hdGVkIDwtIHJvd1N1bXMoczUwMV9jb3B5KSAjIG5yIG9mIHRpbWVzIHNvbWVvbmUgaGFzIGJlZW4gbm9taW5hdGVkDQpmcmllbmRzX2hhcyA8LSBjb2xTdW1zKHM1MDFfY29weSkgIyBuciBvZiBmcmllbmRzIHNvbWVvbmUgaGFzIGFuc3dlcmVkDQoNClZpZXcoZnJpZW5kc19ub21pbmF0ZWQpDQpWaWV3KGZyaWVuZHNfaGFzKQ0KDQp0YWJsZShmcmllbmRzX25vbWluYXRlZCkNCnRhYmxlKGZyaWVuZHNfaGFzKQ0KDQpiYXJwbG90KGZyaWVuZHNfbm9taW5hdGVkKQ0KYmFycGxvdChmcmllbmRzX2hhcykNCg0KcHJvcC50YWJsZSh0YWJsZShmcmllbmRzX25vbWluYXRlZCkpDQpwcm9wLnRhYmxlKHRhYmxlKGZyaWVuZHNfaGFzKSkNCg0KYmFycGxvdChzNTAxX2NvcHlbMSxdKSAjIGZvciByZXNwb25kZW50IG9uZQ0KDQpuZXR3b3JrIDwtIGdyYXBoX2Zyb21fYWRqYWNlbmN5X21hdHJpeCgNCiAgczUwMV9jb3B5LA0KICBtb2RlID0gYygiZGlyZWN0ZWQiKSwNCiAgd2VpZ2h0ZWQgPSBOVUxMLA0KICBkaWFnID0gRkFMU0UsDQogIGFkZC5jb2xuYW1lcyA9IE5BLA0KICBhZGQucm93bmFtZXMgPSBOQQ0KKQ0KDQpwbG90KG5ldHdvcmspICMgZ3JhcGhpYyBvdmVydmlldyBvZiBzb21lb25lJ3MgbmV0d29yayAocm91Z2gpDQpgYGANCg0KIyMgQ2FsY3VsYXRlIENsdXN0ZXJpbmcNCg0KIyMjICpUdXRvcmlhbCwgQ2hhcHRlciA0LCA0LjMuMi41IENsdXN0ZXJpbmcqDQoNCi0gUGVvcGxlIGx1bXAgdG9nZXRoZXIgaW4gc2VwYXJhdGUgZ3JvdXBzDQoNCi0gVGhlICoqY2x1c3RlcmluZyBjb2VmZmljaWVudCoqIGZvciB2KmkqIGlzIGRlZmluZWQgYXMNCg0KICAtIFRoZSBvYnNlcnZlZCB0aWVzIGJldHdlZW4gYWxsIGRpcmVjdCBuZWlnaGJvcnMgb2YgdippKiB2aWEgYW4gaW5nb2luZyBhbmQvb3Igb3V0Z29pbmcgcmVsYXRpb24NCg0KICAtIERpdmlkZWQgYnkgYWxsIHBvc3NpYmxlIHRpZXMgYmV0d2VlbiBhbGwgZGlyZWN0IG5laWdoYm9ycyBvZiB2KmkqDQoNCi0gayppKiBhcmUgdGhlIG51bWJlciBvZiBuZWlnaGJvcnMgb2YgdippKg0KDQotIOKIkWVqayBhcmUgdGhlIG51bWJlciBvZiBlZGdlcyBiZXR3ZWVuIHRoZXNlIG5laWdoYm9ycw0KDQotIFRoZSBsb2NhbCBjbHVzdGVyaW5nIGNvZWZmaWNpZW50IGlzIENDKHZpKSA9IOKIkWVqayAvIGtp4oiXKGtp4oiSMSkNCg0KLSBGb3IgdW5kaXJlY3RlZCBuZXR3b3JrcywgdGhlIGNsdXN0ZXJpbmcgY29lZmZpY2llbnQgaXMgdGhlIHNhbWUgYXMgdGhlICoqdHJhbnNpdGl2aXR5IGluZGV4KioNCg0KICAtIFRoZSBudW1iZXIgb2YgdHJhbnNpdGl2ZSB0cmlhZHMgZGl2aWRlZCBieSBhbGwgcG9zc2libGUgdHJhbnNpdGl2ZSB0cmlhZHMNCg0KICAtIFRoaXMgZG9lcyAqbm90KiBhcHBwbHkgdG8gZGlyZWN0ZWQgbmV0d29ya3MNCg0KIyMjIEZvcm11bGENCg0KJCRDQyh2aSkgPSDiiJFlamsgLyBraeKIlyhraeKIkjEpJCQNCg0KIyMgQ2x1c3RlcmluZyBjb2VmZmljaWVudCBpbiBSLCB1c2luZyB0aGUgaWdyYXBoIHBhY2thZ2UNCg0KLSBVc2UgdGhlIHRyYW5zaXRpdml0eSgpIGZ1bmN0aW9uPyBGb3IgbW9yZSBpbmZvcm1hdGlvbjogPGh0dHBzOi8vci5pZ3JhcGgub3JnL3JlZmVyZW5jZS90cmFuc2l0aXZpdHkuaHRtbD4NCg0KLSAqIlRyYW5zaXRpdml0eSBtZWFzdXJlcyB0aGUgcHJvYmFiaWxpdHkgdGhhdCB0aGUgYWRqYWNlbnQgdmVydGljZXMgb2YgYSB2ZXJ0ZXggYXJlIGNvbm5lY3RlZC4gVGhpcyBpcyBzb21ldGltZXMgYWxzbyBjYWxsZWQgdGhlIGNsdXN0ZXJpbmcgY29lZmZpY2llbnQuIioNCg0KLSBJIGFtIG5vdCBzdXJlIGlmIHRoaXMgZnVuY3Rpb24gZml0cywgYXMgayBpdCdzIGZvciB1bmRpcmVjdGVkIG5ldHdvcmtzIChpbiB3aGljaCByZWxhdGlvbnNoaXBzIGFyZSBtdXR1YWwpDQoNCiAgLSAqIlRoZSBnbG9iYWwgdHJhbnNpdGl2aXR5IG9mIGFuIHVuZGlyZWN0ZWQgZ3JhcGguIFRoaXMgaXMgc2ltcGx5IHRoZSByYXRpbyBvZiB0aGUgY291bnQgb2YgdHJpYW5nbGVzIGFuZCBjb25uZWN0ZWQgdHJpcGxlcyBpbiB0aGUgZ3JhcGguIEluIGRpcmVjdGVkIGdyYXBocywgZWRnZSBkaXJlY3Rpb25zIGFyZSBpZ25vcmVkIioNCg0KICAtIE90aGVyIHR5cGVzIGFyZSBwb3NzaWJsZSwgYnV0IHRoZXkgYXJlIGFsbCB1bmRpcmVjdGVkDQoNCiAgLSBROiBvbiBTdGFjayBPdmVyZmxvdyBzb21lb25lIHNheXMgdGhlIGdsb2JhbCBDQyBpcyB0aGUgc2FtZSBmb3IgZGlyZWN0ZWQgYW5kIHVuZGlyZWN0ZWQgbmV0d29ya3M7IGhvdyBkb2VzIHRoYXQgd29yaz8gPGh0dHBzOi8vc3RhY2tvdmVyZmxvdy5jb20vcXVlc3Rpb25zLzY4ODk3OTQwL2hvdy1jYW4taS1jYWxjdWxhdGUtdGhlLWNsdXN0ZXItY29lZmZpY2llbnRzLW9mLWEtZGlyZWN0ZWQtZ3JhcGgtaW4tcj4NCg0KYGBge3J9DQoNCj90cmFuc2l0aXZpdHkoKQ0KDQojIENoZWNrIGlmIHM1MDEgaXMgYW4gdW5kaXJlY3RlZCBvciBkaXJlY3RlZCBuZXR3b3JrDQoNCmZvciAoaSBpbiAxOm5yb3coczUwMSkpIHsNCiAgaWYgKHN1bShzNTAxW2ksXSkgPT0gc3VtKHM1MDFbLGldKSkgew0KICAgIHByaW50KHBhc3RlMCgicGFydGljaXBhbnQgIiwNCiAgICAgICAgICAgICAgICAgaSwNCiAgICAgICAgICAgICAgICAgIjogIiwNCiAgICAgICAgICAgICAgICAgImVxdWFsIG51bWJlciBmcmllbmRzIG1lbnRpb25lZCAmIG1lbnRpb25lZCBhcyBmcmllbmQiKSkNCiAgfSBlbHNlIHsNCiAgICAgIHByaW50KHBhc3RlMCgicGFydGljaXBhbnQgIiwNCiAgICAgICAgICAgICAgICAgaSwNCiAgICAgICAgICAgICAgICAgIjogIiwNCiAgICAgICAgICAgICAgICAgIm51bWJlcnMgZGlmZmVyIikpDQogIH0NCn0NCg0KIyBzaW5jZSB0aGVzZSB2YWx1ZXMgZGlmZmVyLCBpdCdzIG5vdCBhbiB1bmRpcmVjdGVkIG5ldHdvcmsNCiMgQSBjYW4gbm9taW5hdGUgQiBhcyBmcmllbmQsIHdpdGhvdXQgYmVpbmcgbm9taW5hdGVkIGJhY2sgKD0gbm9uIHN5bW1ldHJpY2FsKQ0KDQp0cmFuc2l0aXZpdHkobmV0d29yaykgIyAwLjQyMjkwNzUgKGJ1dCB3aGF0IGRvZXMgdGhpcyBudW1iZXIgc2F5PyBub3RoaW5nLCBpIHRoaW5rKQ0KYGBgDQoNCiMjIEFub3RoZXIgYXBwcm9hY2gsIHVzaW5nIHRoZSBEaXJlY3RlZENsdXN0ZXJpbmcgcGFja2FnZQ0KDQotIDxodHRwczovL2NyYW4uci1wcm9qZWN0Lm9yZy93ZWIvcGFja2FnZXMvRGlyZWN0ZWRDbHVzdGVyaW5nL0RpcmVjdGVkQ2x1c3RlcmluZy5wZGY+DQoNCmBgYHtyfQ0KIyBpbnN0YWxsLnBhY2thZ2VzKCJEaXJlY3RlZENsdXN0ZXJpbmciKQ0KbGlicmFyeShEaXJlY3RlZENsdXN0ZXJpbmcpDQoNCkNsdXN0QkNHKG1hdCA9IHM1MDFfY29weSwgdHlwZSA9ICJkaXJlY3RlZCIpICMgPSAwLjM5OTQ4MzENCg0KIyBHaXZlcyBsb2NhbCBjbHVzdGVyaW5nIGNvZWZmaWNpZW50cyBmb3IgZWFjaCBub2RlDQojIEFuZCB0aGUgZ2xvYmFsIG9uZSwgYXZlcmFnZWQgYWNyb3NzIHRoZXNlIG5vZGVzDQoNCiMgVGhlIExvY2FsQ0MgJiBHbG9iYWxDQyBhcmUgZm9yIHVuZGlyZWN0ZSBuZXR3b3Jrcw0KIyBGb3IgZGlyZWN0ZWQgbmV0d29ya3MsIHRoZXJlJ3JlIGZvdXIgb3B0aW9ucyAoQ3ljbGUsIEluLCBPdXQsIFRvdGFsKQ0KIyBodHRwczovL3d3dy5zY2llbmNlZGlyZWN0LmNvbS9zY2llbmNlL2FydGljbGUvcGlpL1MxMDA3NTcwNDI0MDAyMzE0IA0KIyBHbG9iYWx0b3RhbENDICYgdG90YWxDQyAobG9jYWwpIA0KDQojIENsdXN0RihtYXQgPSBzNTAxX2NvcHksIHR5cGUgPSAiZGlyZWN0ZWQiKSAjID0gMC4zOTk0ODMxIChzYW1lIHZhbHVlKQ0KYGBgDQoNCiMjIENoZWNrIHdpdGggYSBzbWFsbCBuZXR3b3JrDQoNCmBgYHtyfQ0KIyA/bWF0cml4KCkNCnNtYWxsX21hdHJpeCA8LSBtYXRyaXgoZGF0YSA9IE5BLCBucm93ID0gNCwgbmNvbCA9IDQsIGJ5cm93ID0gVFJVRSkNCnNtYWxsX21hdHJpeF9ub19mcmllbmRzIDwtIG1hdHJpeChkYXRhID0gMCwgbnJvdyA9IDQsIG5jb2wgPSA0LCBieXJvdyA9IFRSVUUpDQpzbWFsbF9tYXRyaXhfYWxsX2ZyaWVuZHMgPC0gbWF0cml4KGRhdGEgPSAxLCBucm93ID0gNCwgbmNvbCA9IDQsIGJ5cm93ID0gVFJVRSkNCg0KI1ZpZXcoc21hbGxfbWF0cml4KQ0KI1ZpZXcoc21hbGxfbWF0cml4X25vX2ZyaWVuZHMpDQojVmlldyhzbWFsbF9tYXRyaXhfYWxsX2ZyaWVuZHMpDQoNCkNsdXN0RihzbWFsbF9tYXRyaXhfbm9fZnJpZW5kcywgdHlwZSA9ICJkaXJlY3RlZCIpICMgR2xvYmFsdG90YWxDQyA9IDANCkNsdXN0RihzbWFsbF9tYXRyaXhfYWxsX2ZyaWVuZHMsIHR5cGUgPSAiZGlyZWN0ZWQiKSAjIEdsb2JhbHRvdGFsQ0MgPSAxDQoNCiMgTGV0J3MgdHJ5IGEgDQpzbWFsbF9tYXRyaXggPC0gbWF0cml4KGRhdGEgPSBjKDAsMSwxLDEsDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEsMCwwLDAsDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEsMSwwLDAsDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDAsMCwxLDApLCBucm93ID0gNCwgbmNvbCA9IDQsIGJ5cm93ID0gVFJVRSkNCg0Kcm93bmFtZXMoc21hbGxfbWF0cml4KSA8LSBjKCJwMSIsICJwMiIsICJwMyIsICJwNCIpDQpjb2xuYW1lcyhzbWFsbF9tYXRyaXgpIDwtIGMoInAxIiwgInAyIiwgInAzIiwgInA0IikNCg0KcHJpbnQoc21hbGxfbWF0cml4KQ0KDQo/Q2x1c3RGKCkNCg0KQ2x1c3RCQ0cobWF0ID0gc21hbGxfbWF0cml4LCB0eXBlID0gImRpcmVjdGVkIikNCg0KYGBgDQoNCiMjIEJ5IGhhbmQNCg0KLSBTdW0gb2YgYWxsIHRoZSBlZGdlcyBiZXR3ZWVuIHRoZSBuZWlnaGJvcnMgb2YgdippKg0KDQotIExldCdzIHNheSBwYXJ0aWNpcGFudCAxDQoNCiAgLSBBcyBwYXJ0aWNpcGFudCAxIGlzIGZyaWVuZHMgd2l0aCBwYXJ0aWNpcGFudCAyLCAzIGFuZCA0LCB3ZSBjb3VudCB0aGUgdGllcyBiZXR3ZWVuIHRoZW0gPSAyDQoNCiAgLSBOZXh0LCB3ZSBjYWxjdWxhdGUgdGhlIG51bWJlciBvZiBuZWlnaGJvcnMgb2YgcGFydGljaXBhbnQgMSA9IDMNCg0KICAgIFwkXCQNCg0KICAgIOKIkWVqayAvIGtp4oiXKGtp4oiSMSkNCg0KICAgIDIgLyAzXCooMy0xKQ0KDQogICAgMiAvIDYgPSAwLDMzMw0KDQogICAgXCRcJA0KDQotIEkgdGhpbmsgdGhpcyBpcyB0aGUgb3V0LWRlZ3JlZSBDQz8NCg0KLSBJZiB3ZSBjaGVjayB3aXRoIHRoZSBDbHVzdGVyQkNHIG91dHB1dCBmb3IgcGFydGljaXBhbnQgMSwgdGhhdCB0cmFja3MNCg==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogImxhYjIiDQpvdXRwdXQ6IGh0bWxfZG9jdW1lbnQNCi0tLQ0KDQojIExhYmpvdXJuYWwgV2VlayAyDQoNCmBgYHtyLCBnbG9iYWxzZXR0aW5ncywgZWNobyA9IEZBTFNFLCB3YXJuaW5nID0gRkFMU0V9DQoNCiNpbnN0YWxsLnBhY2thZ2VzKCJSU2llbmEiKQ0KI2luc3RhbGwucGFja2FnZXMoImlncmFwaCIpDQpsaWJyYXJ5KFJTaWVuYSkNCmxpYnJhcnkoaWdyYXBoKQ0KbGlicmFyeSh0aWR5dmVyc2UpDQpsaWJyYXJ5KGtuaXRyKQ0KDQpvcHRzX2NodW5rJHNldCh3YXJuaW5nID0gRkFMU0UsIG1lc3NhZ2UgPSBGQUxTRSkNCiMgdGlkeSA9IFRSVUUgKHVpdGxpam5lbi9zcGF0aWVzKQ0KIyByZXN1bHRzID0gJ2hvbGQnIChvdXRwdXQgb3AgaGV0IGVpbmRlKQ0KIyBldmFsID0gRkFMU0UgKGNvZGUgbmlldCBydW5uZW4sIG9wIGJhc2lzIHZhbiBlZXJkZXIgd2VyaykNCmBgYA0KDQojIyBMb2FkIE5ldHdvcmtzIHM1MDEgJiBzNTAyDQoNCmBgYHtyfQ0KIyBzNTAxDQojIHM1MDINCiMgP3M1MDEgDQpgYGANCg0KPGJyPg0KDQojIyBJbnNwZWN0IE5ldHdvcmsgczUwMQ0KDQpgYGB7cn0NClZpZXcoczUwMSkNCmNsYXNzKHM1MDEpDQpzdHIoczUwMSkNCg0KczUwMV9jb3B5IDwtIHM1MDENCg0KIyBXaWUgaXMgYmV2cmllbmQgbWV0IHdpZT8NCiMgSG9ldmVlbCB2cmllbmRlbiBoZWJiZW4gbWVuc2VuPw0KIyBNZXQgaG9ldmVlbCBtZW5zZW4gaXMgaWVtYW5kIGJldnJpZW5kPw0KDQojID9ncmFwaF9mcm9tX2FkamFjZW5jeV9tYXRyaXgoKQ0KIyA/ZnJvbV9hZGphY2VuY3koKQ0KYGBgDQoNCjxicj4NCg0KIyMgRGVzY3JpcHRpdmVzDQoNCmBgYHtyfQ0KZnJpZW5kc19ub21pbmF0ZWQgPC0gcm93U3VtcyhzNTAxX2NvcHkpICMgbnIgb2YgdGltZXMgc29tZW9uZSBoYXMgYmVlbiBub21pbmF0ZWQNCmZyaWVuZHNfaGFzIDwtIGNvbFN1bXMoczUwMV9jb3B5KSAjIG5yIG9mIGZyaWVuZHMgc29tZW9uZSBoYXMgYW5zd2VyZWQNCg0KVmlldyhmcmllbmRzX25vbWluYXRlZCkNClZpZXcoZnJpZW5kc19oYXMpDQoNCnRhYmxlKGZyaWVuZHNfbm9taW5hdGVkKQ0KdGFibGUoZnJpZW5kc19oYXMpDQoNCmJhcnBsb3QoZnJpZW5kc19ub21pbmF0ZWQpDQpiYXJwbG90KGZyaWVuZHNfaGFzKQ0KDQpwcm9wLnRhYmxlKHRhYmxlKGZyaWVuZHNfbm9taW5hdGVkKSkNCnByb3AudGFibGUodGFibGUoZnJpZW5kc19oYXMpKQ0KDQpiYXJwbG90KHM1MDFfY29weVsxLF0pICMgZm9yIHJlc3BvbmRlbnQgb25lDQoNCm5ldHdvcmsgPC0gZ3JhcGhfZnJvbV9hZGphY2VuY3lfbWF0cml4KA0KICBzNTAxX2NvcHksDQogIG1vZGUgPSBjKCJkaXJlY3RlZCIpLA0KICB3ZWlnaHRlZCA9IE5VTEwsDQogIGRpYWcgPSBGQUxTRSwNCiAgYWRkLmNvbG5hbWVzID0gTkEsDQogIGFkZC5yb3duYW1lcyA9IE5BDQopDQoNCnBsb3QobmV0d29yaykgIyBncmFwaGljIG92ZXJ2aWV3IG9mIHNvbWVvbmUncyBuZXR3b3JrIChyb3VnaCkNCmBgYA0KDQojIyBDYWxjdWxhdGUgQ2x1c3RlcmluZw0KDQoqKipUdXRvcmlhbCwgQ2hhcHRlciA0LCA0LjMuMi41IENsdXN0ZXJpbmcqKioNCg0KLSBQZW9wbGUgbHVtcCB0b2dldGhlciBpbiBzZXBhcmF0ZSBncm91cHMNCg0KLSBUaGUgKipjbHVzdGVyaW5nIGNvZWZmaWNpZW50KiogZm9yIHYqaSogaXMgZGVmaW5lZCBhcw0KDQogIC0gVGhlIG9ic2VydmVkIHRpZXMgYmV0d2VlbiBhbGwgZGlyZWN0IG5laWdoYm9ycyBvZiB2KmkqIHZpYSBhbiBpbmdvaW5nIGFuZC9vciBvdXRnb2luZyByZWxhdGlvbg0KDQogIC0gRGl2aWRlZCBieSBhbGwgcG9zc2libGUgdGllcyBiZXR3ZWVuIGFsbCBkaXJlY3QgbmVpZ2hib3JzIG9mIHYqaSoNCg0KLSBrKmkqIGFyZSB0aGUgbnVtYmVyIG9mIG5laWdoYm9ycyBvZiB2KmkqDQoNCi0g4oiRZWprIGFyZSB0aGUgbnVtYmVyIG9mIGVkZ2VzIGJldHdlZW4gdGhlc2UgbmVpZ2hib3JzDQoNCi0gVGhlIGxvY2FsIGNsdXN0ZXJpbmcgY29lZmZpY2llbnQgaXMgQ0ModmkpID0g4oiRZWprIC8ga2niiJcoa2niiJIxKQ0KDQotIEZvciB1bmRpcmVjdGVkIG5ldHdvcmtzLCB0aGUgY2x1c3RlcmluZyBjb2VmZmljaWVudCBpcyB0aGUgc2FtZSBhcyB0aGUgKip0cmFuc2l0aXZpdHkgaW5kZXgqKg0KDQogIC0gVGhlIG51bWJlciBvZiB0cmFuc2l0aXZlIHRyaWFkcyBkaXZpZGVkIGJ5IGFsbCBwb3NzaWJsZSB0cmFuc2l0aXZlIHRyaWFkcw0KDQogIC0gVGhpcyBkb2VzICpub3QqIGFwcHBseSB0byBkaXJlY3RlZCBuZXR3b3Jrcw0KDQo8YnI+DQoNCioqKkZvcm11bGEqKioNCg0KJCRDQyh2aSkgPSDiiJFlamsgLyBraeKIlyhraeKIkjEpJCQNCg0KPGJyPg0KDQojIyBDbHVzdGVyaW5nIGNvZWZmaWNpZW50IGluIFINCg0KLSBVc2UgdGhlIHRyYW5zaXRpdml0eSgpIGZ1bmN0aW9uPyBGb3IgbW9yZSBpbmZvcm1hdGlvbjogPGh0dHBzOi8vci5pZ3JhcGgub3JnL3JlZmVyZW5jZS90cmFuc2l0aXZpdHkuaHRtbD4NCg0KLSAqIlRyYW5zaXRpdml0eSBtZWFzdXJlcyB0aGUgcHJvYmFiaWxpdHkgdGhhdCB0aGUgYWRqYWNlbnQgdmVydGljZXMgb2YgYSB2ZXJ0ZXggYXJlIGNvbm5lY3RlZC4gVGhpcyBpcyBzb21ldGltZXMgYWxzbyBjYWxsZWQgdGhlIGNsdXN0ZXJpbmcgY29lZmZpY2llbnQuIioNCg0KLSBJIGFtIG5vdCBzdXJlIGlmIHRoaXMgZnVuY3Rpb24gZml0cywgYXMgayBpdCdzIGZvciB1bmRpcmVjdGVkIG5ldHdvcmtzIChpbiB3aGljaCByZWxhdGlvbnNoaXBzIGFyZSBtdXR1YWwpDQoNCiAgLSAqIlRoZSBnbG9iYWwgdHJhbnNpdGl2aXR5IG9mIGFuIHVuZGlyZWN0ZWQgZ3JhcGguIFRoaXMgaXMgc2ltcGx5IHRoZSByYXRpbyBvZiB0aGUgY291bnQgb2YgdHJpYW5nbGVzIGFuZCBjb25uZWN0ZWQgdHJpcGxlcyBpbiB0aGUgZ3JhcGguIEluIGRpcmVjdGVkIGdyYXBocywgZWRnZSBkaXJlY3Rpb25zIGFyZSBpZ25vcmVkIioNCg0KICAtIE90aGVyIHR5cGVzIGFyZSBwb3NzaWJsZSwgYnV0IHRoZXkgYXJlIGFsbCB1bmRpcmVjdGVkDQoNCiAgLSBROiBvbiBTdGFjayBPdmVyZmxvdyBzb21lb25lIHNheXMgdGhlIGdsb2JhbCBDQyBpcyB0aGUgc2FtZSBmb3IgZGlyZWN0ZWQgYW5kIHVuZGlyZWN0ZWQgbmV0d29ya3M7IGhvdyBkb2VzIHRoYXQgd29yaz8gPGh0dHBzOi8vc3RhY2tvdmVyZmxvdy5jb20vcXVlc3Rpb25zLzY4ODk3OTQwL2hvdy1jYW4taS1jYWxjdWxhdGUtdGhlLWNsdXN0ZXItY29lZmZpY2llbnRzLW9mLWEtZGlyZWN0ZWQtZ3JhcGgtaW4tcj4NCg0KYGBge3J9DQoNCj90cmFuc2l0aXZpdHkoKQ0KDQojIENoZWNrIGlmIHM1MDEgaXMgYW4gdW5kaXJlY3RlZCBvciBkaXJlY3RlZCBuZXR3b3JrDQoNCmZvciAoaSBpbiAxOm5yb3coczUwMSkpIHsNCiAgaWYgKHN1bShzNTAxW2ksXSkgPT0gc3VtKHM1MDFbLGldKSkgew0KICAgIHByaW50KHBhc3RlMCgicGFydGljaXBhbnQgIiwNCiAgICAgICAgICAgICAgICAgaSwNCiAgICAgICAgICAgICAgICAgIjogIiwNCiAgICAgICAgICAgICAgICAgImVxdWFsIG51bWJlciBmcmllbmRzIG1lbnRpb25lZCAmIG1lbnRpb25lZCBhcyBmcmllbmQiKSkNCiAgfSBlbHNlIHsNCiAgICAgIHByaW50KHBhc3RlMCgicGFydGljaXBhbnQgIiwNCiAgICAgICAgICAgICAgICAgaSwNCiAgICAgICAgICAgICAgICAgIjogIiwNCiAgICAgICAgICAgICAgICAgIm51bWJlcnMgZGlmZmVyIikpDQogIH0NCn0NCg0KIyBzaW5jZSB0aGVzZSB2YWx1ZXMgZGlmZmVyLCBpdCdzIG5vdCBhbiB1bmRpcmVjdGVkIG5ldHdvcmsNCiMgQSBjYW4gbm9taW5hdGUgQiBhcyBmcmllbmQsIHdpdGhvdXQgYmVpbmcgbm9taW5hdGVkIGJhY2sgKD0gbm9uIHN5bW1ldHJpY2FsKQ0KDQp0cmFuc2l0aXZpdHkobmV0d29yaykgIyAwLjQyMjkwNzUgKGJ1dCB3aGF0IGRvZXMgdGhpcyBudW1iZXIgc2F5PyBub3RoaW5nLCBpIHRoaW5rKQ0KYGBgDQoNCjxicj4NCg0KIyMgRGlyZWN0ZWRDbHVzdGVyaW5nIHBhY2thZ2UNCg0KLSA8aHR0cHM6Ly9jcmFuLnItcHJvamVjdC5vcmcvd2ViL3BhY2thZ2VzL0RpcmVjdGVkQ2x1c3RlcmluZy9EaXJlY3RlZENsdXN0ZXJpbmcucGRmPg0KDQpgYGB7cn0NCiMgaW5zdGFsbC5wYWNrYWdlcygiRGlyZWN0ZWRDbHVzdGVyaW5nIikNCmxpYnJhcnkoRGlyZWN0ZWRDbHVzdGVyaW5nKQ0KDQpDbHVzdEJDRyhtYXQgPSBzNTAxX2NvcHksIHR5cGUgPSAiZGlyZWN0ZWQiKSAjID0gMC4zOTk0ODMxDQoNCiMgR2l2ZXMgbG9jYWwgY2x1c3RlcmluZyBjb2VmZmljaWVudHMgZm9yIGVhY2ggbm9kZQ0KIyBBbmQgdGhlIGdsb2JhbCBvbmUsIGF2ZXJhZ2VkIGFjcm9zcyB0aGVzZSBub2Rlcw0KDQojIFRoZSBMb2NhbENDICYgR2xvYmFsQ0MgYXJlIGZvciB1bmRpcmVjdGUgbmV0d29ya3MNCiMgRm9yIGRpcmVjdGVkIG5ldHdvcmtzLCB0aGVyZSdyZSBmb3VyIG9wdGlvbnMgKEN5Y2xlLCBJbiwgT3V0LCBUb3RhbCkNCiMgaHR0cHM6Ly93d3cuc2NpZW5jZWRpcmVjdC5jb20vc2NpZW5jZS9hcnRpY2xlL3BpaS9TMTAwNzU3MDQyNDAwMjMxNCANCiMgR2xvYmFsdG90YWxDQyAmIHRvdGFsQ0MgKGxvY2FsKSANCg0KIyBDbHVzdEYobWF0ID0gczUwMV9jb3B5LCB0eXBlID0gImRpcmVjdGVkIikgIyA9IDAuMzk5NDgzMSAoc2FtZSB2YWx1ZSkNCmBgYA0KDQo8YnI+DQoNCiMjIENoZWNrIHdpdGggYSBzbWFsbCBuZXR3b3JrDQoNCmBgYHtyfQ0KIyA/bWF0cml4KCkNCnNtYWxsX21hdHJpeCA8LSBtYXRyaXgoZGF0YSA9IE5BLCBucm93ID0gNCwgbmNvbCA9IDQsIGJ5cm93ID0gVFJVRSkNCnNtYWxsX21hdHJpeF9ub19mcmllbmRzIDwtIG1hdHJpeChkYXRhID0gMCwgbnJvdyA9IDQsIG5jb2wgPSA0LCBieXJvdyA9IFRSVUUpDQpzbWFsbF9tYXRyaXhfYWxsX2ZyaWVuZHMgPC0gbWF0cml4KGRhdGEgPSAxLCBucm93ID0gNCwgbmNvbCA9IDQsIGJ5cm93ID0gVFJVRSkNCg0KI1ZpZXcoc21hbGxfbWF0cml4KQ0KI1ZpZXcoc21hbGxfbWF0cml4X25vX2ZyaWVuZHMpDQojVmlldyhzbWFsbF9tYXRyaXhfYWxsX2ZyaWVuZHMpDQoNCkNsdXN0RihzbWFsbF9tYXRyaXhfbm9fZnJpZW5kcywgdHlwZSA9ICJkaXJlY3RlZCIpICMgR2xvYmFsdG90YWxDQyA9IDANCkNsdXN0RihzbWFsbF9tYXRyaXhfYWxsX2ZyaWVuZHMsIHR5cGUgPSAiZGlyZWN0ZWQiKSAjIEdsb2JhbHRvdGFsQ0MgPSAxDQoNCiMgTGV0J3MgdHJ5IGEgDQpzbWFsbF9tYXRyaXggPC0gbWF0cml4KGRhdGEgPSBjKDAsMSwxLDEsDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEsMCwwLDAsDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEsMSwwLDAsDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDAsMCwxLDApLCBucm93ID0gNCwgbmNvbCA9IDQsIGJ5cm93ID0gVFJVRSkNCg0Kcm93bmFtZXMoc21hbGxfbWF0cml4KSA8LSBjKCJwMSIsICJwMiIsICJwMyIsICJwNCIpDQpjb2xuYW1lcyhzbWFsbF9tYXRyaXgpIDwtIGMoInAxIiwgInAyIiwgInAzIiwgInA0IikNCg0KcHJpbnQoc21hbGxfbWF0cml4KQ0KDQo/Q2x1c3RGKCkNCg0KQ2x1c3RCQ0cobWF0ID0gc21hbGxfbWF0cml4LCB0eXBlID0gImRpcmVjdGVkIikNCg0KYGBgDQoNCjxicj4NCg0KIyMgQnkgaGFuZA0KDQotIFN1bSBvZiBhbGwgdGhlIGVkZ2VzIGJldHdlZW4gdGhlIG5laWdoYm9ycyBvZiB2KmkqDQoNCi0gTGV0J3Mgc2F5IHBhcnRpY2lwYW50IDENCg0KICAtIEFzIHBhcnRpY2lwYW50IDEgaXMgZnJpZW5kcyB3aXRoIHBhcnRpY2lwYW50IDIsIDMgYW5kIDQsIHdlIGNvdW50IHRoZSB0aWVzIGJldHdlZW4gdGhlbSA9IDINCg0KICAtIE5leHQsIHdlIGNhbGN1bGF0ZSB0aGUgbnVtYmVyIG9mIG5laWdoYm9ycyBvZiBwYXJ0aWNpcGFudCAxID0gMw0KDQogIC0g4oiRZWprIC8ga2niiJcoa2niiJIxKQ0KDQogIC0gMiAvIDNcKigzLTEpDQoNCiAgLSAyIC8gNiA9IDAsMzMzDQoNCjwhLS0gLS0+DQoNCi0gSSB0aGluayB0aGlzIGlzIHRoZSBvdXQtZGVncmVlIENDPw0KDQotIElmIHdlIGNoZWNrIHdpdGggdGhlIENsdXN0ZXJCQ0cgb3V0cHV0IGZvciBwYXJ0aWNpcGFudCAxLCB0aGF0IHRyYWNrcw0KDQogIC0gDQo=</div>
 
 
 </div>

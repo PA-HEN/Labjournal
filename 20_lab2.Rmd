@@ -23,10 +23,12 @@ opts_chunk$set(warning = FALSE, message = FALSE)
 ## Load Networks s501 & s502
 
 ```{r}
-s501
-s502
+# s501
+# s502
 # ?s501 
 ```
+
+<br>
 
 ## Inspect Network s501
 
@@ -44,6 +46,8 @@ s501_copy <- s501
 # ?graph_from_adjacency_matrix()
 # ?from_adjacency()
 ```
+
+<br>
 
 ## Descriptives
 
@@ -79,7 +83,7 @@ plot(network) # graphic overview of someone's network (rough)
 
 ## Calculate Clustering
 
-### *Tutorial, Chapter 4, 4.3.2.5 Clustering*
+***Tutorial, Chapter 4, 4.3.2.5 Clustering***
 
 - People lump together in separate groups
 
@@ -101,11 +105,15 @@ plot(network) # graphic overview of someone's network (rough)
 
   - This does *not* appply to directed networks
 
-### Formula
+<br>
+
+***Formula***
 
 $$CC(vi) = ∑ejk / ki∗(ki−1)$$
 
-## Clustering coefficient in R, using the igraph package
+<br>
+
+## Clustering coefficient in R
 
 - Use the transitivity() function? For more information: <https://r.igraph.org/reference/transitivity.html>
 
@@ -145,7 +153,9 @@ for (i in 1:nrow(s501)) {
 transitivity(network) # 0.4229075 (but what does this number say? nothing, i think)
 ```
 
-## Another approach, using the DirectedClustering package
+<br>
+
+## DirectedClustering package
 
 - <https://cran.r-project.org/web/packages/DirectedClustering/DirectedClustering.pdf>
 
@@ -165,6 +175,8 @@ ClustBCG(mat = s501_copy, type = "directed") # = 0.3994831
 
 # ClustF(mat = s501_copy, type = "directed") # = 0.3994831 (same value)
 ```
+
+<br>
 
 ## Check with a small network
 
@@ -198,6 +210,8 @@ ClustBCG(mat = small_matrix, type = "directed")
 
 ```
 
+<br>
+
 ## By hand
 
 - Sum of all the edges between the neighbors of v*i*
@@ -208,16 +222,16 @@ ClustBCG(mat = small_matrix, type = "directed")
 
   - Next, we calculate the number of neighbors of participant 1 = 3
 
-    \$\$
+  - ∑ejk / ki∗(ki−1)
 
-    ∑ejk / ki∗(ki−1)
+  - 2 / 3\*(3-1)
 
-    2 / 3\*(3-1)
+  - 2 / 6 = 0,333
 
-    2 / 6 = 0,333
-
-    \$\$
+<!-- -->
 
 - I think this is the out-degree CC?
 
 - If we check with the ClusterBCG output for participant 1, that tracks
+
+  - 
